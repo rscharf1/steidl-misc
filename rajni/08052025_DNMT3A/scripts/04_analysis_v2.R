@@ -30,14 +30,12 @@ pdf("hsc-umap.pdf")
 		pt.size = 0.4)
 dev.off()
 
-
 obj <- hsc
 g1 <- "RUNX1"
 g2 <- "IRF8"
 title <- "Test"
 thresh = 0.25
 
-# ---- helper: one UMAP + simple stats ----
 coexp_umap <- function(obj, g1, g2, thresh = 0.25, title = NULL) {
   DefaultAssay(obj) <- "RNA"
   if (!"data" %in% Layers(obj[["RNA"]])) obj <- NormalizeData(obj, verbose = FALSE)
@@ -223,12 +221,220 @@ ggplot(dt2, aes(x = name, y = frac_both, fill = group)) +
         legend.position = "top")
 dev.off()
 
+# WT v. DNTM3A KO
+wt <- c("GSM5171988", "GSM5171989", "GSM5257698")
+ko <- c("GSM5171990", "GSM5171991", "GSM5257699", "GSM5257700")
 
+	# UMAP
+res1 <- coexp_umap(subset(hsc, subset = batch %in% wt), "IRF8", "RUNX1", thresh = 0.25, title = "IRF8/RUNX1 state")
+res2 <- coexp_umap(subset(hsc, subset = batch %in% ko), "IRF8", "RUNX1", thresh = 0.25, title = "IRF8/RUNX1 state")
 
+pdf("wt_ko_umap.pdf")
+	print(res1$plot)
+	print(res2$plot)
+dev.off()
 
+# WILD TYPE 
+pos_candidates <- list(
+  c("Gapdh","Actb"),
+  c("Rpl13a","Rplp0"),
+  c("Ppia","B2m")
+) 
 
+pos_dt <- lapply(seq_along(pos_candidates), function(p) {
+	g1 <- pos_candidates[[p]][1] %>% toupper()
+	g2 <- pos_candidates[[p]][2] %>% toupper()
 
+	res <- coexp_umap(subset(hsc, subset = batch %in% wt), g1, g2)
 
+	data.table(
+		batch = "WT",
+		g1 = g1,
+		g2 = g2,
+		frac_both = res$frac_both,
+		frac_g1_high = res$frac_g1_high,
+		frac_g2_high = res$frac_g2_high,
+		group = "pos ctrl"
+	)
+}) %>% rbindlist()
 
+pos_dt$name <- paste0(pos_dt$g1, " & ", pos_dt$g2)
+
+neg_candidates <- list(
+	c("LYZ2", "KLF1"),
+	c("MKI67", "TOP2A"),
+	c("Procr","Flt3")
+)
+
+neg_dt <- lapply(seq_along(pos_candidates), function(p) {
+	g1 <- neg_candidates[[p]][1] %>% toupper()
+	g2 <- neg_candidates[[p]][2] %>% toupper()
+
+	res <- coexp_umap(subset(hsc, subset = batch %in% wt), g1, g2)
+
+	data.table(
+		batch = "WT",
+		g1 = g1,
+		g2 = g2,
+		frac_both = res$frac_both,
+		frac_g1_high = res$frac_g1_high,
+		frac_g2_high = res$frac_g2_high,
+		group = "neg ctrl"
+	)
+}) %>% rbindlist()
+
+neg_dt$name <- paste0(neg_dt$g1, " & ", neg_dt$g2)
+
+dt <- rbind(pos_dt, neg_dt)
+
+res_irf8_runx1 <- coexp_umap(subset(hsc, subset = batch %in% wt), "IRF8", "RUNX1", thresh = 0.25, title = "IRF8/RUNX1 state")
+
+my_pair <- data.table(
+	batch = "WT",
+	g1 = "IRF8",
+	g2 = "RUNX1",
+	frac_both = res_irf8_runx1$frac_both,
+	frac_g1_high = res_irf8_runx1$frac_g1_high,
+	frac_g2_high = res_irf8_runx1$frac_g2_high,
+	group = "exp",
+	name = "IRF8 & RUNX1"
+)
+
+dt2 <- rbind(dt, my_pair)
+
+dt2[, group := factor(group, levels = c("pos ctrl","neg ctrl", "exp"))]
+setorder(dt2, group, -frac_both)                 # or: setorder(dt, group, name)
+dt2[, name := factor(name, levels = dt2$name)]     # lock x-axis order
+
+wt_dt <- dt2
+
+n_pos <- sum(dt2$group == "pos ctrl")
+
+pdf("all_WT.pdf", width = 7, height = 3.5)
+ggplot(dt2, aes(x = name, y = frac_both, fill = group)) +
+  geom_col() +
+  geom_text(aes(label = round(frac_both, digits = 3)), vjust = -0.3, size = 3) + 
+  geom_vline(xintercept = n_pos + 0.5, linetype = 2) +  # visual split
+  geom_vline(xintercept = n_pos + n_pos + 0.5, linetype = 2) +  # visual split
+  scale_fill_manual(values = c("pos ctrl" = "#1f78b4", "neg ctrl" = "#b2df8a", "exp" = "firebrick3")) +
+  labs(x = NULL, y = "fraction both-high") +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "top") + 
+  labs(x = "Gene Pair", y = "Fraction both-high", title = "Wild Type")
+dev.off()
+
+# KNOCKOUT 
+pos_candidates <- list(
+  c("Gapdh","Actb"),
+  c("Rpl13a","Rplp0"),
+  c("Ppia","B2m")
+) 
+
+pos_dt <- lapply(seq_along(pos_candidates), function(p) {
+	g1 <- pos_candidates[[p]][1] %>% toupper()
+	g2 <- pos_candidates[[p]][2] %>% toupper()
+
+	res <- coexp_umap(subset(hsc, subset = batch %in% ko), g1, g2)
+
+	data.table(
+		batch = "KO",
+		g1 = g1,
+		g2 = g2,
+		frac_both = res$frac_both,
+		frac_g1_high = res$frac_g1_high,
+		frac_g2_high = res$frac_g2_high,
+		group = "pos ctrl"
+	)
+}) %>% rbindlist()
+
+pos_dt$name <- paste0(pos_dt$g1, " & ", pos_dt$g2)
+
+neg_candidates <- list(
+	c("LYZ2", "KLF1"),
+	c("MKI67", "TOP2A"),
+	c("Procr","Flt3")
+)
+
+neg_dt <- lapply(seq_along(pos_candidates), function(p) {
+	g1 <- neg_candidates[[p]][1] %>% toupper()
+	g2 <- neg_candidates[[p]][2] %>% toupper()
+
+	res <- coexp_umap(subset(hsc, subset = batch %in% ko), g1, g2)
+
+	data.table(
+		batch = "KO",
+		g1 = g1,
+		g2 = g2,
+		frac_both = res$frac_both,
+		frac_g1_high = res$frac_g1_high,
+		frac_g2_high = res$frac_g2_high,
+		group = "neg ctrl"
+	)
+}) %>% rbindlist()
+
+neg_dt$name <- paste0(neg_dt$g1, " & ", neg_dt$g2)
+
+dt <- rbind(pos_dt, neg_dt)
+
+res_irf8_runx1 <- coexp_umap(subset(hsc, subset = batch %in% ko), "IRF8", "RUNX1", thresh = 0.25, title = "IRF8/RUNX1 state")
+
+my_pair <- data.table(
+	batch = "KO",
+	g1 = "IRF8",
+	g2 = "RUNX1",
+	frac_both = res_irf8_runx1$frac_both,
+	frac_g1_high = res_irf8_runx1$frac_g1_high,
+	frac_g2_high = res_irf8_runx1$frac_g2_high,
+	group = "exp",
+	name = "IRF8 & RUNX1"
+)
+
+dt2 <- rbind(dt, my_pair)
+
+dt2[, group := factor(group, levels = c("pos ctrl","neg ctrl", "exp"))]
+setorder(dt2, group, -frac_both)                 # or: setorder(dt, group, name)
+dt2[, name := factor(name, levels = dt2$name)]     # lock x-axis order
+
+ko_dt <- dt2
+
+n_pos <- sum(dt2$group == "pos ctrl")
+
+pdf("all_KO.pdf", width = 7, height = 3.5)
+	ggplot(dt2, aes(x = name, y = frac_both, fill = group)) +
+	  geom_col() +
+	  geom_text(aes(label = round(frac_both, digits = 3)), vjust = -0.3, size = 3) + 
+	  geom_vline(xintercept = n_pos + 0.5, linetype = 2) +  # visual split
+	  geom_vline(xintercept = n_pos + n_pos + 0.5, linetype = 2) +  # visual split
+	  scale_fill_manual(values = c("pos ctrl" = "#1f78b4", "neg ctrl" = "#b2df8a", "exp" = "firebrick3")) +
+	  labs(x = NULL, y = "fraction both-high") +
+	  theme_classic() +
+	  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+	        legend.position = "top") + 
+	  labs(x = "Gene Pair", y = "Fraction both-high", title = "DNMT3A Knockout")
+dev.off()
+
+# Fold Change 
+
+dt_both <- merge(
+	wt_dt[, c("batch", "group", "name", "frac_both"), with = FALSE],
+	ko_dt[, c("batch", "group", "name", "frac_both"), with = FALSE],
+	by = "name"
+)
+
+dt_both$logFC <- log2(dt_both$frac_both.x / dt_both$frac_both.y)
+
+pdf("FC.pdf")
+ggplot(dt_both, aes(x = name, y = logFC, fill = group.x)) + 
+	geom_col() + 
+	theme_classic() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+      legend.position = "top") + 
+  geom_vline(xintercept = n_pos + 0.5, linetype = 2) +  # visual split
+  geom_vline(xintercept = n_pos + n_pos + 0.5, linetype = 2) +  # visual split
+  scale_fill_manual(values = c("pos ctrl" = "#1f78b4", "neg ctrl" = "#b2df8a", "exp" = "firebrick3")) + 
+  labs(x = "Gene Pair", y = "Log Fold Change (Wildtype/Knockout)") + 
+  ylim(-2, 2)
+dev.off()
 
 
