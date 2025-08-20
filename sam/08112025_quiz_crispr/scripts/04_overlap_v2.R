@@ -95,19 +95,11 @@ plots <- lapply(seq_along(drugs), function(x) {
 		list(p1, p2)
 })
 
-
-
 pdf("outputs/test.pdf", width = 10)
 	for(i in 1:8) {
 		print(plots[[i]][[1]] + plots[[i]][[2]])
 	}
 dev.off()
-
-
-
-
-
-
 
 
 

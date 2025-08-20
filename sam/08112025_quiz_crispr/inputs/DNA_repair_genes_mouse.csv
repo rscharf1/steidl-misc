@@ -1,0 +1,261 @@
+﻿gene_name,Input Type,MGI Gene/Marker ID,mouse_gene_name,Name,Feature Type,Ensembl ID,Entrez Gene ID
+UNG,current symbol,MGI:109352,Ung,uracil DNA glycosylase,protein coding gene,ENSMUSG00000029591,22256
+SMUG1,current symbol,MGI:1918976,Smug1,single-strand selective monofunctional uracil DNA glycosylase,protein coding gene,ENSMUSG00000036061,71726
+MBD4,current symbol,MGI:1333850,Mbd4,methyl-CpG binding domain protein 4,protein coding gene,ENSMUSG00000030322,17193
+TDG,current symbol,MGI:108247,Tdg,thymine DNA glycosylase,protein coding gene,ENSMUSG00000034674,21665
+TDG,human symbol,MGI:3645587,Tdg-ps,"thymine DNA glycosylase, pseudogene",pseudogene,ENSMUSG00000047347,545124
+OGG1,current symbol,MGI:1097693,Ogg1,8-oxoguanine DNA-glycosylase 1,protein coding gene,ENSMUSG00000030271,18294
+MUTYH,current symbol,MGI:1917853,Mutyh,mutY DNA glycosylase,protein coding gene,ENSMUSG00000028687,70603
+NTHL1,current symbol,MGI:1313275,Nthl1,nth (endonuclease III)-like 1 (E.coli),protein coding gene,ENSMUSG00000041429,18207
+MPG,current symbol,MGI:97073,Mpg,N-methylpurine-DNA glycosylase,protein coding gene,ENSMUSG00000020287,268395
+NEIL1,current symbol,MGI:1920024,Neil1,nei endonuclease VIII-like 1 (E. coli),protein coding gene,ENSMUSG00000032298,72774
+NEIL2,current symbol,MGI:2686058,Neil2,nei like 2 (E. coli),protein coding gene,ENSMUSG00000035121,382913
+NEIL3,current symbol,MGI:2384588,Neil3,nei like 3 (E. coli),protein coding gene,ENSMUSG00000039396,234258
+APEX1,current symbol,MGI:88042,Apex1,apurinic/apyrimidinic endonuclease 1,protein coding gene,ENSMUSG00000035960,11792
+APEX2,current symbol,MGI:1924872,Apex2,apurinic/apyrimidinic endonuclease 2,protein coding gene,ENSMUSG00000025269,77622
+LIG3,current symbol,MGI:109152,Lig3,"ligase III, DNA, ATP-dependent",protein coding gene,ENSMUSG00000020697,16882
+LIG3,human synonym,MGI:2443955,Lrig3,leucine-rich repeats and immunoglobulin-like domains 3,protein coding gene,ENSMUSG00000020105,320398
+XRCC1,current symbol,MGI:99137,Xrcc1,X-ray repair complementing defective repair in Chinese hamster cells 1,protein coding gene,ENSMUSG00000051768,22594
+PNKP,current symbol,MGI:1891698,Pnkp,polynucleotide kinase 3'- phosphatase,protein coding gene,ENSMUSG00000002963,59047
+APLF,current symbol,MGI:1919353,Aplf,aprataxin and PNKP like factor,protein coding gene,ENSMUSG00000030051,72103
+HMCES,current symbol,MGI:1914053,Hmces,"5-hydroxymethylcytosine (hmC) binding, ES cell specific",protein coding gene,ENSMUSG00000030060,232210
+PARP1,current symbol,MGI:1340806,Parp1,"poly (ADP-ribose) polymerase family, member 1",protein coding gene,ENSMUSG00000026496,11545
+PARP2,current symbol,MGI:1341112,Parp2,"poly (ADP-ribose) polymerase family, member 2",protein coding gene,ENSMUSG00000036023,11546
+PARP2,synonym,MGI:1934664,Rpph1,ribonuclease P RNA component H1,RNase P RNA gene,ENSMUSG00000092837,85029
+PARP3,current symbol,MGI:1891258,Parp3,"poly (ADP-ribose) polymerase family, member 3",protein coding gene,ENSMUSG00000023249,235587
+PARG,current symbol,MGI:1347094,Parg,poly (ADP-ribose) glycohydrolase,protein coding gene,ENSMUSG00000021911,26430
+PARPBP,current symbol,MGI:1922567,Parpbp,PARP1 binding protein,protein coding gene,ENSMUSG00000035365,75317
+MGMT,current symbol,MGI:96977,Mgmt,O-6-methylguanine-DNA methyltransferase,protein coding gene,ENSMUSG00000054612,17314
+ALKBH2,current symbol,MGI:2141032,Alkbh2,"alkB homolog 2, alpha-ketoglutarate-dependent dioxygenase",protein coding gene,ENSMUSG00000044339,231642
+ALKBH3,current symbol,MGI:1916363,Alkbh3,"alkB homolog 3, alpha-ketoglutarate-dependent dioxygenase",protein coding gene,ENSMUSG00000040174,69113
+TDP1,current symbol,MGI:1920036,Tdp1,tyrosyl-DNA phosphodiesterase 1,protein coding gene,ENSMUSG00000021177,104884
+TDP2,current symbol,MGI:1860486,Tdp2,tyrosyl-DNA phosphodiesterase 2,protein coding gene,ENSMUSG00000035958,56196
+SPRTN,current symbol,MGI:2685351,Sprtn,SprT-like N-terminal domain,protein coding gene,ENSMUSG00000031986,244666
+MSH2,current symbol,MGI:101816,Msh2,mutS homolog 2,protein coding gene,ENSMUSG00000024151,17685
+MSH3,current symbol,MGI:109519,Msh3,mutS homolog 3,protein coding gene,ENSMUSG00000014850,17686
+MSH6,current symbol,MGI:1343961,Msh6,mutS homolog 6,protein coding gene,ENSMUSG00000005370,17688
+MLH1,current symbol,MGI:101938,Mlh1,mutL homolog 1,protein coding gene,ENSMUSG00000032498,17350
+PMS2,current symbol,MGI:104288,Pms2,"PMS1 homolog2, mismatch repair system component",protein coding gene,ENSMUSG00000079109,18861
+MSH4,current symbol,MGI:1860077,Msh4,mutS homolog 4,protein coding gene,ENSMUSG00000005493,55993
+MSH5,synonym,MGI:96231,Hspa1l,heat shock protein 1-like,protein coding gene,ENSMUSG00000007033,15482
+MSH5,current symbol,MGI:1329021,Msh5,mutS homolog 5,protein coding gene,ENSMUSG00000007035,17687
+MLH3,current symbol,MGI:1353455,Mlh3,mutL homolog 3,protein coding gene,ENSMUSG00000021245,217716
+PMS1,current symbol,MGI:1202302,Pms1,"PMS1 homolog 1, mismatch repair system component",protein coding gene,ENSMUSG00000026098,227099
+PMS2P3,,No associated gene,,,,,
+HFM1,current symbol,MGI:3036246,Hfm1,"HFM1, ATP-dependent DNA helicase homolog",protein coding gene,ENSMUSG00000043410,330149
+HFM1,synonym,MGI:2389057,Hrtfm1,heart failure modifier 1,QTL,,492843
+XPC,current symbol,MGI:103557,Xpc,"xeroderma pigmentosum, complementation group C",protein coding gene,ENSMUSG00000030094,22591
+RAD23B,current symbol,MGI:105128,Rad23b,"RAD23 homolog B, nucleotide excision repair protein",protein coding gene,ENSMUSG00000028426,19359
+CETN2,zebrafish symbol,MGI:1347086,Cetn1,centrin 1,protein coding gene,ENSMUSG00000050996,26369
+CETN2,current symbol,MGI:1347085,Cetn2,centrin 2,protein coding gene,ENSMUSG00000031347,26370
+RAD23A,current symbol,MGI:105126,Rad23a,"RAD23 homolog A, nucleotide excision repair protein",protein coding gene,ENSMUSG00000003813,19358
+XPA,current symbol,MGI:99135,Xpa,"xeroderma pigmentosum, complementation group A",protein coding gene,ENSMUSG00000028329,22590
+DDB1,current symbol,MGI:1202384,Ddb1,damage specific DNA binding protein 1,protein coding gene,ENSMUSG00000024740,13194
+DDB2,current symbol,MGI:1355314,Ddb2,damage specific DNA binding protein 2,protein coding gene,ENSMUSG00000002109,107986
+RPA1,human synonym,MGI:1096397,Polr1a,polymerase (RNA) I polypeptide A,protein coding gene,ENSMUSG00000049553,20019
+RPA1,current symbol,MGI:1915525,Rpa1,replication protein A1,protein coding gene,ENSMUSG00000000751,68275
+RPA2,synonym,MGI:108014,Polr1b,polymerase (RNA) I polypeptide B,protein coding gene,ENSMUSG00000027395,20017
+RPA2,current symbol,MGI:1339939,Rpa2,replication protein A2,protein coding gene,ENSMUSG00000028884,19891
+RPA3,current symbol,MGI:1915490,Rpa3,replication protein A3,protein coding gene,ENSMUSG00000012483,68240
+TFIIH,human synonym,MGI:95413,Ercc2,"excision repair cross-complementing rodent repair deficiency, complementation group 2",protein coding gene,ENSMUSG00000030400,13871
+TFIIH,human synonym,MGI:95414,Ercc3,"excision repair cross-complementing rodent repair deficiency, complementation group 3",protein coding gene,ENSMUSG00000024382,13872
+TFIIH,human synonym,MGI:1277216,Gtf2h1,"general transcription factor II H, polypeptide 1",protein coding gene,ENSMUSG00000006599,14884
+TFIIH,human synonym,MGI:1345669,Gtf2h2,"general transcription factor II H, polypeptide 2",protein coding gene,ENSMUSG00000021639,23894
+TFIIH,human synonym,MGI:1277143,Gtf2h3,"general transcription factor IIH, polypeptide 3",protein coding gene,ENSMUSG00000029387,209357
+TFIIH,human synonym,MGI:1338799,Gtf2h4,"general transcription factor II H, polypeptide 4",protein coding gene,ENSMUSG00000001524,14885
+TFIIH,human synonym,MGI:107227,Gtf2h5,"general transcription factor IIH, polypeptide 5",protein coding gene,ENSMUSG00000034345,66467
+ERCC3,current symbol,MGI:95414,Ercc3,"excision repair cross-complementing rodent repair deficiency, complementation group 3",protein coding gene,ENSMUSG00000024382,13872
+ERCC2,current symbol,MGI:95413,Ercc2,"excision repair cross-complementing rodent repair deficiency, complementation group 2",protein coding gene,ENSMUSG00000030400,13871
+GTF2H1,current symbol,MGI:1277216,Gtf2h1,"general transcription factor II H, polypeptide 1",protein coding gene,ENSMUSG00000006599,14884
+GTF2H2,current symbol,MGI:1345669,Gtf2h2,"general transcription factor II H, polypeptide 2",protein coding gene,ENSMUSG00000021639,23894
+GTF2H3,current symbol,MGI:1277143,Gtf2h3,"general transcription factor IIH, polypeptide 3",protein coding gene,ENSMUSG00000029387,209357
+GTF2H4,current symbol,MGI:1338799,Gtf2h4,"general transcription factor II H, polypeptide 4",protein coding gene,ENSMUSG00000001524,14885
+GTF2H5,current symbol,MGI:107227,Gtf2h5,"general transcription factor IIH, polypeptide 5",protein coding gene,ENSMUSG00000034345,66467
+GTF2E2,current symbol,MGI:1915403,Gtf2e2,"general transcription factor II E, polypeptide 2 (beta subunit)",protein coding gene,ENSMUSG00000031585,68153
+CDK7,current symbol,MGI:102956,Cdk7,cyclin dependent kinase 7,protein coding gene,ENSMUSG00000069089,12572
+CCNH,current symbol,MGI:1913921,Ccnh,cyclin H,protein coding gene,ENSMUSG00000021548,66671
+MNAT1,current symbol,MGI:106207,Mnat1,menage a trois 1,protein coding gene,ENSMUSG00000021103,17420
+MNAT1,synonym,MGI:1922088,Naa15,"N(alpha)-acetyltransferase 15, NatA auxiliary subunit",protein coding gene,ENSMUSG00000063273,74838
+ERCC5,current symbol,MGI:103582,Ercc5,"excision repair cross-complementing rodent repair deficiency, complementation group 5",protein coding gene,ENSMUSG00000026048,22592
+ERCC1,current symbol,MGI:95412,Ercc1,"excision repair cross-complementing rodent repair deficiency, complementation group 1",protein coding gene,ENSMUSG00000003549,13870
+ERCC4,current symbol,MGI:1354163,Ercc4,"excision repair cross-complementing rodent repair deficiency, complementation group 4",protein coding gene,ENSMUSG00000022545,50505
+LIG1,current symbol,MGI:101789,Lig1,"ligase I, DNA, ATP-dependent",protein coding gene,ENSMUSG00000056394,16881
+LIG1,human synonym,MGI:107935,Lrig1,leucine-rich repeats and immunoglobulin-like domains 1,protein coding gene,ENSMUSG00000030029,16206
+NER-related,,No associated gene,,,,,
+ERCC8,current symbol,MGI:1919241,Ercc8,"excision repaiross-complementing rodent repair deficiency, complementation group 8",protein coding gene,ENSMUSG00000021694,71991
+ERCC6,current symbol,MGI:1100494,Ercc6,"excision repair cross-complementing rodent repair deficiency, complementation group 6",protein coding gene,ENSMUSG00000054051,319955
+UVSSA,current symbol,MGI:1918351,Uvssa,UV stimulated scaffold protein A,protein coding gene,ENSMUSG00000037355,71101
+XAB2,current symbol,MGI:1914689,Xab2,XPA binding protein 2,protein coding gene,ENSMUSG00000019470,67439
+MMS19,current symbol,MGI:1919449,Mms19,MMS19 cytosolic iron-sulfur assembly component,protein coding gene,ENSMUSG00000025159,72199
+MMS19,synonym,MGI:1321131,Ms19,minisatellites detected by probe MMS19,minisatellite,,111647
+RAD51,current symbol,MGI:97890,Rad51,RAD51 recombinase,protein coding gene,ENSMUSG00000027323,19361
+RAD51B,current symbol,MGI:1099436,Rad51b,RAD51 paralog B,protein coding gene,ENSMUSG00000059060,19363
+RAD51D,current symbol,MGI:1261809,Rad51d,RAD51 paralog D,protein coding gene,ENSMUSG00000018841,19364
+HELQ,current symbol,MGI:2176740,Helq,"helicase, POLQ-like",protein coding gene,ENSMUSG00000035266,191578
+SWI5,current symbol,MGI:1920181,Swi5,SWI5 recombination repair homolog (yeast),protein coding gene,ENSMUSG00000044627,72931
+SWSAP1,current symbol,MGI:1914212,Swsap1,SWIM type zinc finger 7 associated protein 1,protein coding gene,ENSMUSG00000051238,66962
+ZSWIM7,current symbol,MGI:1916997,Zswim7,zinc finger SWIM-type containing 7,protein coding gene,ENSMUSG00000014243,69747
+SPIDR,current symbol,MGI:1924834,Spidr,scaffolding protein involved in DNA repair,protein coding gene,ENSMUSG00000041974,224008
+PDS5B,current symbol,MGI:2140945,Pds5b,PDS5 cohesin associated factor B,protein coding gene,ENSMUSG00000034021,100710
+DMC1,synonym,MGI:3702976,Dbmc1,diabetes mRNA cluster 1,QTL,,100037410
+DMC1,current symbol,MGI:105393,Dmc1,DNA meiotic recombinase 1,protein coding gene,ENSMUSG00000022429,13404
+DMC1,human synonym,MGI:2445087,Hid1,HID1 domain containing,protein coding gene,ENSMUSG00000034586,217310
+XRCC2,current symbol,MGI:1927345,Xrcc2,X-ray repair complementing defective repair in Chinese hamster cells 2,protein coding gene,ENSMUSG00000028933,57434
+XRCC3,current symbol,MGI:1921585,Xrcc3,X-ray repair complementing defective repair in Chinese hamster cells 3,protein coding gene,ENSMUSG00000021287,74335
+RAD52,current symbol,MGI:101949,Rad52,"RAD52 homolog, DNA repair protein",protein coding gene,ENSMUSG00000030166,19365
+RAD54L,human synonym,MGI:103067,Atrx,"ATRX, chromatin remodeler",protein coding gene,ENSMUSG00000031229,22589
+RAD54L,current symbol,MGI:894697,Rad54l,RAD54 like (S. cerevisiae),protein coding gene,ENSMUSG00000028702,19366
+RAD54B,rat symbol,MGI:5301008,Fsbp,fibrinogen silencer binding protein,protein coding gene,ENSMUSG00000094595,100503583
+RAD54B,current symbol,MGI:3605986,Rad54b,RAD54 homolog B (S. cerevisiae),protein coding gene,ENSMUSG00000078773,623474
+BRCA1,current symbol,MGI:104537,Brca1,"breast cancer 1, early onset",protein coding gene,ENSMUSG00000017146,12189
+BARD1,current symbol,MGI:1328361,Bard1,BRCA1 associated RING domain 1,protein coding gene,ENSMUSG00000026196,12021
+ABRAXAS1,current symbol,MGI:1917931,Abraxas1,BRCA1 A complex subunit,protein coding gene,ENSMUSG00000035234,70681
+PAXIP1,current symbol,MGI:1890430,Paxip1,PAX interacting (with transcription-activation domain) protein 1,protein coding gene,ENSMUSG00000002221,55982
+SMC5,current symbol,MGI:2385088,Smc5,structural maintenance of chromosomes 5,protein coding gene,ENSMUSG00000024943,226026
+SMC6,current symbol,MGI:1914491,Smc6,structural maintenance of chromosomes 6,protein coding gene,ENSMUSG00000020608,67241
+SHLD1,current symbol,MGI:1920997,Shld1,shieldin complex subunit 1,protein coding gene,ENSMUSG00000044991,73747
+SHLD2,current symbol,MGI:1922948,Shld2,shieldin complex subunit 2,protein coding gene,ENSMUSG00000041471,75698
+SHLD3,current symbol,MGI:6194609,Shld3,shieldin complex subunit 3,protein coding gene,ENSMUSG00000118537,113002583
+SHLD3,human synonym,MGI:1914225,Trappc13,trafficking protein particle complex 13,protein coding gene,ENSMUSG00000021711,66975
+SEM1,current symbol,MGI:109238,Sem1,"SEM1, 26S proteasome complex subunit",protein coding gene,ENSMUSG00000042541,20422
+RAD50,current symbol,MGI:109292,Rad50,RAD50 double strand break repair protein,protein coding gene,ENSMUSG00000020380,19360
+MRE11A,current symbol,MGI:1100512,Mre11a,"MRE11A homolog A, double strand break repair nuclease",protein coding gene,ENSMUSG00000031928,17535
+NBN,human synonym,MGI:1333791,Artn,artemin,protein coding gene,ENSMUSG00000028539,11876
+NBN,current symbol,MGI:1351625,Nbn,nibrin,protein coding gene,ENSMUSG00000028224,27354
+RBBP8,current symbol,MGI:2442995,Rbbp8,"retinoblastoma binding protein 8, endonuclease",protein coding gene,ENSMUSG00000041238,225182
+MUS81,current symbol,MGI:1918961,Mus81,MUS81 structure-specific endonuclease subunit,protein coding gene,ENSMUSG00000024906,71711
+EME1,current symbol,MGI:3576783,Eme1,essential meiotic structure-specific endonuclease 1,protein coding gene,ENSMUSG00000039055,268465
+EME2,current symbol,MGI:1919889,Eme2,essential meiotic structure-specific endonuclease subunit 2,protein coding gene,ENSMUSG00000073436,193838
+SLX1A,human symbol,MGI:1915220,Slx1b,SLX1 structure-specific endonuclease subunit homolog B (S. cerevisiae),protein coding gene,ENSMUSG00000059772,75764
+SLX1B,current symbol,MGI:1915220,Slx1b,SLX1 structure-specific endonuclease subunit homolog B (S. cerevisiae),protein coding gene,ENSMUSG00000059772,75764
+GEN1,current symbol,MGI:2443149,Gen1,"GEN1, Holliday junction 5' flap endonuclease",protein coding gene,ENSMUSG00000051235,209334
+FANCA,current symbol,MGI:1341823,Fanca,"Fanconi anemia, complementation group A",protein coding gene,ENSMUSG00000032815,14087
+FANCB,current symbol,MGI:2448558,Fancb,"Fanconi anemia, complementation group B",protein coding gene,ENSMUSG00000047757,237211
+FANCC,current symbol,MGI:95480,Fancc,"Fanconi anemia, complementation group C",protein coding gene,ENSMUSG00000021461,14088
+BRCA2,current symbol,MGI:109337,Brca2,"breast cancer 2, early onset",protein coding gene,ENSMUSG00000041147,12190
+FANCD2,current symbol,MGI:2448480,Fancd2,"Fanconi anemia, complementation group D2",protein coding gene,ENSMUSG00000034023,211651
+FANCE,current symbol,MGI:1920025,Fance,"Fanconi anemia, complementation group E",protein coding gene,ENSMUSG00000007570,72775
+FANCF,current symbol,MGI:3689889,Fancf,"Fanconi anemia, complementation group F",protein coding gene,ENSMUSG00000092118,100040608
+FANCG,current symbol,MGI:1926471,Fancg,"Fanconi anemia, complementation group G",protein coding gene,ENSMUSG00000028453,60534
+FANCI,current symbol,MGI:2384790,Fanci,"Fanconi anemia, complementation group I",protein coding gene,ENSMUSG00000039187,208836
+BRIP1,current symbol,MGI:2442836,Brip1,BRCA1 interacting protein C-terminal helicase 1,protein coding gene,ENSMUSG00000034329,237911
+BRIP1,human synonym,MGI:2137228,Mrpl36,mitochondrial ribosomal protein L36,protein coding gene,ENSMUSG00000021607,94066
+FANCL,current symbol,MGI:1914280,Fancl,"Fanconi anemia, complementation group L",protein coding gene,ENSMUSG00000004018,67030
+FANCM,current symbol,MGI:2442306,Fancm,"Fanconi anemia, complementation group M",protein coding gene,ENSMUSG00000055884,104806
+PALB2,current symbol,MGI:3040695,Palb2,partner and localizer of BRCA2,protein coding gene,ENSMUSG00000044702,233826
+RAD51C,current symbol,MGI:2150020,Rad51c,RAD51 paralog C,protein coding gene,ENSMUSG00000007646,114714
+SLX4(FANCP),,No associated gene,,,,,
+FAAP20,current symbol,MGI:1914763,Faap20,Fanconi anemia core complex associated protein 20,protein coding gene,ENSMUSG00000073684,67513
+FAAP24,current symbol,MGI:2142208,Faap24,Fanconi anemia core complex associated protein 24,protein coding gene,ENSMUSG00000030493,101831
+FAAP100,current symbol,MGI:1919135,Faap100,Fanconi anemia core complex associated protein 100,protein coding gene,ENSMUSG00000025384,71885
+UBE2T,current symbol,MGI:1914446,Ube2t,ubiquitin-conjugating enzyme E2T,protein coding gene,ENSMUSG00000026429,67196
+XRCC6,current symbol,MGI:95606,Xrcc6,X-ray repair complementing defective repair in Chinese hamster cells 6,protein coding gene,ENSMUSG00000022471,14375
+XRCC5,current symbol,MGI:104517,Xrcc5,X-ray repair complementing defective repair in Chinese hamster cells 5,protein coding gene,ENSMUSG00000026187,22596
+PRKDC,current symbol,MGI:104779,Prkdc,"protein kinase, DNA activated, catalytic polypeptide",protein coding gene,ENSMUSG00000022672,19090
+LIG4,current symbol,MGI:1335098,Lig4,"ligase IV, DNA, ATP-dependent",protein coding gene,ENSMUSG00000049717,319583
+XRCC4,current symbol,MGI:1333799,Xrcc4,X-ray repair complementing defective repair in Chinese hamster cells 4,protein coding gene,ENSMUSG00000021615,108138
+DCLRE1C,current symbol,MGI:2441769,Dclre1c,DNA cross-link repair 1C,protein coding gene,ENSMUSG00000026648,227525
+NHEJ1,current symbol,MGI:1922820,Nhej1,non-homologous end joining factor 1,protein coding gene,ENSMUSG00000026162,75570
+NUDT1,current symbol,MGI:109280,Nudt1,nudix hydrolase 1,protein coding gene,ENSMUSG00000036639,17766
+DUT,current symbol,MGI:1346051,Dut,deoxyuridine triphosphatase,protein coding gene,ENSMUSG00000027203,110074
+RRM2B,current symbol,MGI:2155865,Rrm2b,ribonucleotide reductase M2 B (TP53 inducible),protein coding gene,ENSMUSG00000022292,382985
+PARK7,current symbol,MGI:2135637,Park7,"Parkinson disease (autosomal recessive, early onset) 7",protein coding gene,ENSMUSG00000028964,57320
+DNPH1,current symbol,MGI:3039376,Dnph1,2'-deoxynucleoside 5'-phosphate N-hydrolase 1,protein coding gene,ENSMUSG00000040658,381101
+NUDT15,current symbol,MGI:2443366,Nudt15,nudix hydrolase 15,protein coding gene,ENSMUSG00000033405,214254
+NUDT18,current symbol,MGI:2385853,Nudt18,nudix hydrolase 18,protein coding gene,ENSMUSG00000045211,213484
+POLA1,current symbol,MGI:99660,Pola1,"polymerase (DNA directed), alpha 1",protein coding gene,ENSMUSG00000006678,18968
+POLB,current symbol,MGI:97740,Polb,"polymerase (DNA directed), beta",protein coding gene,ENSMUSG00000031536,18970
+POLB,human synonym,MGI:1354947,Polg2,"polymerase (DNA directed), gamma 2, accessory subunit",protein coding gene,ENSMUSG00000020718,50776
+POLD1,current symbol,MGI:97741,Pold1,"polymerase (DNA directed), delta 1, catalytic subunit",protein coding gene,ENSMUSG00000038644,18971
+POLD2,current symbol,MGI:1097163,Pold2,"polymerase (DNA directed), delta 2, regulatory subunit",protein coding gene,ENSMUSG00000020471,18972
+POLD3,current symbol,MGI:1915217,Pold3,"polymerase (DNA-directed), delta 3, accessory subunit",protein coding gene,ENSMUSG00000030726,67967
+POLD4,current symbol,MGI:1916995,Pold4,"polymerase (DNA-directed), delta 4",protein coding gene,ENSMUSG00000024854,69745
+POLD4,human synonym,MGI:1915061,Poldip2,"polymerase (DNA-directed), delta interacting protein 2",protein coding gene,ENSMUSG00000001100,67811
+POLE,current symbol,MGI:1196391,Pole,"polymerase (DNA directed), epsilon",protein coding gene,ENSMUSG00000007080,18973
+POLE2,current symbol,MGI:1197514,Pole2,"polymerase (DNA directed), epsilon 2 (p59 subunit)",protein coding gene,ENSMUSG00000020974,18974
+POLE3,current symbol,MGI:1933378,Pole3,"polymerase (DNA directed), epsilon 3 (p17 subunit)",protein coding gene,ENSMUSG00000028394,59001
+POLE4,current symbol,MGI:1914229,Pole4,"polymerase (DNA-directed), epsilon 4 (p12 subunit)",protein coding gene,ENSMUSG00000030042,66979
+REV3L,current symbol,MGI:1337131,Rev3l,"REV3 like, DNA directed polymerase zeta catalytic subunit",protein coding gene,ENSMUSG00000019841,19714
+MAD2L2,current symbol,MGI:1919140,Mad2l2,MAD2 mitotic arrest deficient-like 2,protein coding gene,ENSMUSG00000029003,71890
+REV1,current symbol,MGI:1929074,Rev1,"REV1, DNA directed polymerase",protein coding gene,ENSMUSG00000026082,56210
+POLG,current symbol,MGI:1196389,Polg,"polymerase (DNA directed), gamma",protein coding gene,ENSMUSG00000039176,18975
+POLH,current symbol,MGI:1891457,Polh,"polymerase (DNA directed), eta (RAD 30 related)",protein coding gene,ENSMUSG00000023953,80905
+POLI,current symbol,MGI:1347081,Poli,"polymerase (DNA directed), iota",protein coding gene,ENSMUSG00000038425,26447
+POLQ,human synonym,MGI:1349767,Polk,"polymerase (DNA directed), kappa",protein coding gene,ENSMUSG00000021668,27015
+POLQ,current symbol,MGI:2155399,Polq,"polymerase (DNA directed), theta",protein coding gene,ENSMUSG00000034206,77782
+POLK,current symbol,MGI:1349767,Polk,"polymerase (DNA directed), kappa",protein coding gene,ENSMUSG00000021668,27015
+POLK,human synonym,MGI:2682295,Tent4a,terminal nucleotidyltransferase 4A,protein coding gene,ENSMUSG00000034575,210106
+POLL,current symbol,MGI:1889000,Poll,"polymerase (DNA directed), lambda",protein coding gene,ENSMUSG00000025218,56626
+POLM,current symbol,MGI:1860191,Polm,"polymerase (DNA directed), mu",protein coding gene,ENSMUSG00000020474,54125
+POLN,current symbol,MGI:2675617,Poln,DNA polymerase N,protein coding gene,ENSMUSG00000045102,272158
+PRIMPOL,current symbol,MGI:3603756,Primpol,primase and polymerase (DNA-directed),protein coding gene,ENSMUSG00000038225,408022
+DNTT,current symbol,MGI:98659,Dntt,"deoxynucleotidyltransferase, terminal",protein coding gene,ENSMUSG00000025014,21673
+FEN1,current symbol,MGI:102779,Fen1,flap structure specific endonuclease 1,protein coding gene,ENSMUSG00000024742,14156
+FAN1,current symbol,MGI:3045266,Fan1,FANCD2/FANCI-associated nuclease 1,protein coding gene,ENSMUSG00000033458,330554
+FAN1,old symbol,MGI:1352745,Fscn1,fascin actin-bundling protein 1,protein coding gene,ENSMUSG00000029581,14086
+TREX1,current symbol,MGI:1328317,Trex1,three prime repair exonuclease 1,protein coding gene,ENSMUSG00000049734,22040
+TREX2,current symbol,MGI:1346343,Trex2,three prime repair exonuclease 2,protein coding gene,ENSMUSG00000031372,24102
+EXO1,current symbol,MGI:1349427,Exo1,exonuclease 1,protein coding gene,ENSMUSG00000039748,26909
+APTX,current symbol,MGI:1913658,Aptx,aprataxin,protein coding gene,ENSMUSG00000028411,66408
+SPO11,current symbol,MGI:1349669,Spo11,SPO11 initiator of meiotic double stranded breaks,protein coding gene,ENSMUSG00000005883,26972
+ENDOV,current symbol,MGI:2444688,Endov,endonuclease V,protein coding gene,ENSMUSG00000039850,338371
+DNA2,current symbol,MGI:2443732,Dna2,DNA replication helicase/nuclease 2,protein coding gene,ENSMUSG00000036875,327762
+DCLRE1A,current symbol,MGI:1930042,Dclre1a,DNA cross-link repair 1A,protein coding gene,ENSMUSG00000025077,55947
+DCLRE1B,current symbol,MGI:2156057,Dclre1b,DNA cross-link repair 1B,protein coding gene,ENSMUSG00000027845,140917
+EXO5,current symbol,MGI:1920422,Exo5,exonuclease 5,protein coding gene,ENSMUSG00000028629,73172
+UBE2A,current symbol,MGI:102959,Ube2a,ubiquitin-conjugating enzyme E2A,protein coding gene,ENSMUSG00000016308,22209
+UBE2B,current symbol,MGI:102944,Ube2b,ubiquitin-conjugating enzyme E2B,protein coding gene,ENSMUSG00000020390,22210
+RAD18,current symbol,MGI:1890476,Rad18,RAD18 E3 ubiquitin protein ligase,protein coding gene,ENSMUSG00000030254,58186
+SHPRH,current symbol,MGI:1917581,Shprh,SNF2 histone linker PHD RING helicase,protein coding gene,ENSMUSG00000090112,268281
+HLTF,current symbol,MGI:1196437,Hltf,helicase-like transcription factor,protein coding gene,ENSMUSG00000002428,20585
+RNF168,current symbol,MGI:1917488,Rnf168,ring finger protein 168,protein coding gene,ENSMUSG00000014074,70238
+RNF8,current symbol,MGI:1929069,Rnf8,ring finger protein 8,protein coding gene,ENSMUSG00000090083,58230
+RNF4,current symbol,MGI:1201691,Rnf4,ring finger protein 4,protein coding gene,ENSMUSG00000029110,19822
+UBE2V2,current symbol,MGI:1917870,Ube2v2,ubiquitin-conjugating enzyme E2 variant 2,protein coding gene,ENSMUSG00000022674,70620
+UBE2N,current symbol,MGI:1934835,Ube2n,ubiquitin-conjugating enzyme E2N,protein coding gene,ENSMUSG00000074781,93765
+USP1,current symbol,MGI:2385198,Usp1,ubiquitin specific peptidase 1,protein coding gene,ENSMUSG00000028560,230484
+WDR48,current symbol,MGI:1914811,Wdr48,WD repeat domain 48,protein coding gene,ENSMUSG00000032512,67561
+HERC2,current symbol,MGI:103234,Herc2,HECT and RLD domain containing E3 ubiquitin protein ligase 2,protein coding gene,ENSMUSG00000030451,15204
+H2AX,current symbol,MGI:102688,H2ax,H2A.X variant histone,protein coding gene,ENSMUSG00000049932,15270
+CHAF1A,current symbol,MGI:1351331,Chaf1a,"chromatin assembly factor 1, subunit A",protein coding gene,ENSMUSG00000002835,27221
+SETMAR,current symbol,MGI:1921979,Setmar,SET domain without mariner transposase fusion,protein coding gene,ENSMUSG00000034639,74729
+ATRX,current symbol,MGI:103067,Atrx,"ATRX, chromatin remodeler",protein coding gene,ENSMUSG00000031229,22589
+BLM,current symbol,MGI:1328362,Blm,"Bloom syndrome, RecQ like helicase",protein coding gene,ENSMUSG00000030528,12144
+RMI1,current symbol,MGI:1921636,Rmi1,RecQ mediated genome instability 1,protein coding gene,ENSMUSG00000035367,74386
+TOP3A,current symbol,MGI:1197527,Top3a,topoisomerase (DNA) III alpha,protein coding gene,ENSMUSG00000002814,21975
+WRN,current symbol,MGI:109635,Wrn,Werner syndrome RecQ like helicase,protein coding gene,ENSMUSG00000031583,22427
+RECQL4,current symbol,MGI:1931028,Recql4,RecQ protein-like 4,protein coding gene,ENSMUSG00000033762,79456
+ATM,current symbol,MGI:107202,Atm,ataxia telangiectasia mutated,protein coding gene,ENSMUSG00000034218,11920
+MPLKIP,current symbol,MGI:1913558,Mplkip,M-phase specific PLK1 intereacting protein,protein coding gene,ENSMUSG00000012429,66308
+MPLKIP,human symbol,MGI:3648735,Mplkipl1,M-phase specific PLK1 intereacting protein like 1,protein coding gene,ENSMUSG00000094649,633057
+RPA4,current symbol,MGI:6723893,Rpa4,replication protein A4,protein coding gene,,118568452
+PRPF19,current symbol,MGI:106247,Prpf19,pre-mRNA processing factor 19,protein coding gene,ENSMUSG00000024735,28000
+RECQL,current symbol,MGI:103021,Recql,RecQ protein-like,protein coding gene,ENSMUSG00000030243,19691
+RECQL5,current symbol,MGI:2156841,Recql5,RecQ protein-like 5,protein coding gene,ENSMUSG00000020752,170472
+RDM1,current symbol,MGI:1913849,Rdm1,RAD52 motif 1,protein coding gene,ENSMUSG00000010362,66599
+NABP2,current symbol,MGI:1917167,Nabp2,nucleic acid binding protein 2,protein coding gene,ENSMUSG00000025374,69917
+ATR,human synonym,MGI:1916788,Antxr1,anthrax toxin receptor 1,protein coding gene,ENSMUSG00000033420,69538
+ATR,current symbol,MGI:108028,Atr,ataxia telangiectasia and Rad3 related,protein coding gene,ENSMUSG00000032409,245000
+ATR,human synonym,MGI:1924947,Mmab,methylmalonic aciduria (cobalamin deficiency) cblB type homolog (human),protein coding gene,ENSMUSG00000029575,77697
+ATR,human synonym,MGI:1915598,Serpina1f,"serine (or cysteine) peptidase inhibitor, clade A, member 1F",protein coding gene,ENSMUSG00000021081,68348
+ATRIP,current symbol,MGI:1925349,Atrip,ATR interacting protein,protein coding gene,ENSMUSG00000025646,235610
+MDC1,current symbol,MGI:3525201,Mdc1,mediator of DNA damage checkpoint 1,protein coding gene,ENSMUSG00000061607,240087
+PCNA,current symbol,MGI:97503,Pcna,proliferating cell nuclear antigen,protein coding gene,ENSMUSG00000027342,18538
+RAD1,human synonym,MGI:1354163,Ercc4,"excision repair cross-complementing rodent repair deficiency, complementation group 4",protein coding gene,ENSMUSG00000022545,50505
+RAD1,current symbol,MGI:1316678,Rad1,RAD1 checkpoint DNA exonuclease,protein coding gene,ENSMUSG00000022248,19355
+RAD1,human synonym,MGI:1925666,Rnase6,"ribonuclease, RNase A family, 6",protein coding gene,ENSMUSG00000021880,78416
+RAD1,human synonym,MGI:1930943,Rrad,Ras-related associated with diabetes,protein coding gene,ENSMUSG00000031880,56437
+RAD9A,current symbol,MGI:1328356,Rad9a,RAD9 checkpoint clamp component A,protein coding gene,ENSMUSG00000024824,19367
+HUS1,current symbol,MGI:1277962,Hus1,HUS1 checkpoint clamp component,protein coding gene,ENSMUSG00000020413,15574
+RAD17,current symbol,MGI:1333807,Rad17,RAD17 checkpoint clamp loader component,protein coding gene,ENSMUSG00000021635,19356
+CHEK1,current symbol,MGI:1202065,Chek1,checkpoint kinase 1,protein coding gene,ENSMUSG00000032113,12649
+CHEK2,current symbol,MGI:1355321,Chek2,checkpoint kinase 2,protein coding gene,ENSMUSG00000029521,50883
+TP53,human symbol,MGI:98834,Trp53,transformation related protein 53,protein coding gene,ENSMUSG00000059552,22059
+TP53BP1,human symbol,MGI:1351320,Trp53bp1,transformation related protein 53 binding protein 1,protein coding gene,ENSMUSG00000043909,27223
+RIF1,synonym,MGI:1351595,Insl6,insulin-like 6,protein coding gene,ENSMUSG00000050957,27356
+RIF1,human synonym,MGI:2445214,Lrif1,ligand dependent nuclear receptor interacting factor 1,protein coding gene,ENSMUSG00000056260,321000
+RIF1,current symbol,MGI:1098622,Rif1,replication timing regulatory factor 1,protein coding gene,ENSMUSG00000036202,51869
+TOPBP1,current symbol,MGI:1920018,Topbp1,topoisomerase (DNA) II binding protein 1,protein coding gene,ENSMUSG00000032555,235559
+CLK2,current symbol,MGI:1098669,Clk2,CDC-like kinase 2,protein coding gene,ENSMUSG00000068917,12748
+CLK2,human synonym,MGI:1918968,Telo2,telomere maintenance 2,protein coding gene,ENSMUSG00000024170,71718
+PER1,current symbol,MGI:1098283,Per1,period circadian clock 1,protein coding gene,ENSMUSG00000020893,18626
