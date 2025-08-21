@@ -191,41 +191,32 @@ plots <- lapply(seq_along(drugs), function(x) {
 	    aes(x = logFC, y = logP),
 	    color = "grey70", size = 1.4, alpha = 0.9, shape = 17
 	  ) +
+  	  geom_point(
+	    data = paper_sub[is_label == TRUE & side == "right"],
+	    aes(x = logFC, y = logP),
+	    color = "grey70", size = 3, shape = 17
+	  ) +
 	  # highlighted (left = red circles)
 	  geom_point(
 	    data = paper_sub[is_label == TRUE & side == "left"],
 	    aes(x = logFC, y = logP),
 	    color = "red2", size = 3, shape = 16
 	  ) +
-	  # highlighted (right = blue triangles)
-	  geom_point(
-	    data = paper_sub[is_label == TRUE & side == "right"],
-	    aes(x = logFC, y = logP),
-	    color = "steelblue3", size = 3, shape = 17
-	  ) +
-	  # labels
-	  # geom_text_repel(
-	  #   data = paper_sub[is_label == TRUE],
-	  #   aes(x = logFC, y = logP, label = gene),
-	  #   size = 4,
-	  #   nudge_x = ifelse(paper_sub[is_label == TRUE]$logFC < 0, -0.015, 0.015),
-	  #   min.segment.length = 0,
-	  #   box.padding = 0.25,
-	  #   point.padding = 0.15,
-	  #   max.overlaps = Inf,
-	  #   segment.size = 0.4
-	  # ) +
-    	geom_label_repel(
-		  data = paper_sub[is_label == TRUE],
+	  geom_segment(aes(x = 0, xend = 0, y = 0, yend = ylim[2]), linewidth = 1) +
+	  geom_label_repel(
+		  data = paper_sub[is_label == TRUE & side == "left"],
 		  aes(x = logFC, y = logP, label = gene),
 		  size = 4,
 		  min.segment.length = 0,
-		  box.padding = 0.25,
-		  point.padding = 0.15,
+		  box.padding = 0.7,
+		  point.padding = 0.8,
+		  force = 2,                # push labels harder away from points
 		  max.overlaps = Inf,
-		  segment.size = 0.4
-		) +
-	  geom_segment(aes(x = 0, xend = 0, y = 0, yend = ylim[2]), linewidth = 1) +
+		  segment.size = 0.4,
+		  segment.color = "black",
+		  nudge_y = 0.5,   # move it upward
+  		  nudge_x = -0.05 # optional sideways nudge
+		) + 
 	  theme_classic(base_size = 14) +
 	  labs(x = "LogFC", y = "-log(P)", title = my_drug) + 
 	  xlim(xlim)
