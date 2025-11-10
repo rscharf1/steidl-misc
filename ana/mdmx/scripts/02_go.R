@@ -11,11 +11,11 @@ library(ggrepel)
 
 # WT v. MDMX-Tg
 
-dt <- fread("inputs/wt_v_mdmx.csv", skip = 2, header = TRUE)
+dt <- fread("inputs/ure_v_ure_mdmx.csv", skip = 2, header = TRUE)
 
 dt[, neglog10_padj := -log10(padj)]
 
-pdf("outputs/out1.pdf")
+pdf("outputs/out3.pdf")
 
 dt %>% 
 	ggplot(., aes(x = log2FoldChange, y = neglog10_padj)) + 
@@ -23,7 +23,7 @@ dt %>%
 	geom_hline(yintercept = -log10(0.05), color = "red", linetype = "dashed") +
 	theme_minimal() +
 	labs(
-	x = "log2FC(MDMX-Tg/WT)",
+	x = "log2FC(URE;MDMX/URE)",
 	y = expression(-log[10](adjusted~p~value)),
 	color = "Gene Biotype",
 	title = "Volcano Plot"
@@ -53,7 +53,7 @@ dt %>%
   geom_hline(yintercept = -log10(0.05), color = "red", linetype = "dashed") +
   theme_minimal() +
   labs(
-    x = "log2FC(MDMX-Tg/WT)",
+    x = "log2FC(URE;MDMX-Tg/URE)",
     y = expression(-log[10](adjusted~p~value)),
     color = "Gene Biotype",
     title = "Volcano Plot Colored by Gene Biotype"
@@ -70,7 +70,7 @@ dt %>%
   facet_wrap(~ gene_biotype, scales = "free") +
   theme_minimal() +
   labs(
-    x = "log2FC(MDMX-Tg/WT)",
+    x = "log2FC(URE;MDMX-Tg/URE)",
     y = expression(-log[10](adjusted~p~value)),
     color = "Gene Biotype",
     title = "Volcano Plots Split by Gene Biotype"
@@ -81,7 +81,14 @@ dt %>%
     strip.text = element_text(face = "bold", size = 9)
   )
 
-count_cols <- c("M351WT", "M352Mdmx", "M371Mdmx", "M380Mdmx", "M383WT", "M396WT")
+count_cols <- c(
+  "M356URE.Mdmx",
+  "M358URE",
+  "M372URE",
+  "M373URE",
+  "M381URE.Mdmx",
+  "M384URE.Mdmx"
+)
 
 dt[, n_samples_above0 := rowSums(.SD > 0), .SDcols = count_cols]
 
@@ -91,7 +98,7 @@ dt[gene_biotype == "protein_coding"][!is.na(neglog10_padj)][n_samples_above0 > 2
 	geom_hline(yintercept = -log10(0.05), color = "red", linetype = "dashed") +
 	theme_minimal() +
 	labs(
-	x = "log2FC(MDMX-Tg/WT)",
+	x = "log2FC(URE;MDMX-Tg/URE)",
 	y = expression(-log[10](adjusted~p~value)),
 	color = "Gene Biotype",
 	title = "Volcano Plot Protein Coding Genes"
@@ -120,7 +127,7 @@ ggplot(dt_sub, aes(x = log2FoldChange, y = neglog10_padj)) +
   ) +
   theme_minimal() +
   labs(
-    x = "log2FC(MDMX-Tg/WT)",
+    x = "log2FC(URE;MDMX-Tg/URE)",
     y = expression(-log[10](adjusted~p~value)),
     title = "Volcano Plot Protein Coding Genes"
   ) +
@@ -150,7 +157,7 @@ m <- merge(
   all.x = TRUE
 )
 
-pdf("outputs/out2.pdf")
+pdf("outputs/out4.pdf")
 
 tmp <- m[gene_biotype == "protein_coding"][!is.na(neglog10_padj)][n_samples_above0 > 2]
 
@@ -179,7 +186,7 @@ ggplot() +
   geom_hline(yintercept = -log10(0.05), color = "red", linetype = "dashed") +
   theme_minimal() +
   labs(
-    x = "log2FC(MDMX-Tg/WT)",
+    x = "log2FC(URE;MDMX-Tg/URE)",
     y = expression(-log[10](adjusted~p~value)),
     title = "Surface Protein Coding Genes"
   ) +
@@ -194,7 +201,7 @@ m[gene_biotype == "protein_coding"][!is.na(neglog10_padj)][n_samples_above0 > 2]
 	geom_hline(yintercept = -log10(0.05), color = "red", linetype = "dashed") +
 	theme_minimal() +
 	labs(
-	x = "log2FC(MDMX-Tg/WT)",
+	x = "log2FC(URE;MDMX-Tg/URE)",
 	y = expression(-log[10](adjusted~p~value)),
 	color = "Gene Biotype",
 	title = "Surface Protein Coding Genes"
@@ -226,7 +233,7 @@ ggplot(m_sub, aes(x = log2FoldChange, y = neglog10_padj)) +
   ) +
   theme_minimal() +
   labs(
-    x = "log2FC(MDMX-Tg/WT)",
+    x = "log2FC(URE;MDMX-Tg/URE)",
     y = expression(-log[10](adjusted~p~value)),
     title = "Surface Protein Coding Genes"
   ) +
