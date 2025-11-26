@@ -233,3 +233,12 @@ ggplot(m_sub, aes(x = log2FoldChange, y = neglog10_padj)) +
   theme(plot.title = element_text(hjust = 0.5))
 
 dev.off()
+
+fwrite(m_sub, "outputs/wt_v_mdmx.csv", row.names = FALSE) 
+
+
+
+
+
+
+
