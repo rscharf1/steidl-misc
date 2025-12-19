@@ -1,0 +1,4 @@
+sbatch scripts/H1_run_salmon.sh
+sbatch scripts/H1_run_salmon_no_whitelist.sh
+sbatch scripts/H2_run_salmon.sh
+sbatch scripts/H2_run_salmon_no_whitelist.sh
