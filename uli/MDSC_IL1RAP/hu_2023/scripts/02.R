@@ -6,6 +6,7 @@ library(readr)
 library(tidyverse)
 library(Matrix)
 
+# Merge AML samples into single Seurat object
 files <- list.files("inputs", pattern = "gz$", full.names = TRUE)
 
 aml <- files[grep("AML", files)]
@@ -33,7 +34,9 @@ load_seurat_object <- function(path) {
 
 obj_list <- lapply(aml, load_seurat_object)
 
-merged <- merge(obj_list[[1]], y = obj_list[-1], add.cell.ids = basename(aml[1:2]))
+cell_ids <- sub("_expression_counts\\.csv\\.gz$", "", basename(aml))
+
+merged <- merge(obj_list[[1]], y = obj_list[-1], add.cell.ids = cell_ids)
 
 merged <- NormalizeData(merged)
 merged <- FindVariableFeatures(merged)
@@ -43,37 +46,43 @@ merged <- FindNeighbors(merged, dims = 1:20)
 merged <- FindClusters(merged)
 merged <- RunUMAP(merged, dims = 1:20)
 
+# saveRDS(merged, "outputs/merged_AML.rds")
+
+# Analysis
+merged <- readRDS("outputs/merged_AML.rds")
+
 merged$celltype <- "Unknown"
-merged$celltype[merged$seurat_clusters == 18] <- "B cells"
-merged$celltype[merged$seurat_clusters %in% c(4, 6, 11, 14)] <- "CD4 T cells"
-merged$celltype[merged$seurat_clusters %in% c(7, 8)] <- "CD8 T cells"
-merged$celltype[merged$seurat_clusters %in% c(0, 1, 2)] <- "Monocytes"
+merged$celltype[merged$seurat_clusters %in% c(4, 25, 27)] <- "B cells"
+merged$celltype[merged$seurat_clusters %in% c(0, 1, 8, 15, 20)] <- "CD4 T cells"
+merged$celltype[merged$seurat_clusters %in% c(2, 6, 7, 10, 17, 19, 27)] <- "CD8 T cells"
+merged$celltype[merged$seurat_clusters %in% c()] <- "Monocytes"
+
 
 pdf("out2.pdf")
 	DimPlot(merged, reduction = "umap", label = TRUE, label.size = 5)
-	VlnPlot(merged, features = "CD19", group.by = "seurat_clusters", pt.size = 0) # B cells: 16
-	VlnPlot(merged, features = "CD3D", group.by = "seurat_clusters", pt.size = 0) # T cells: 4, 6, 7, 8, 12, 14
-	VlnPlot(merged, features = "CD3E", group.by = "seurat_clusters", pt.size = 0) # T cells: 4, 6, 7, 8, 12, 14
-	VlnPlot(merged, features = "CD3G", group.by = "seurat_clusters", pt.size = 0) # T cells: 4, 6, 7, 8, 12, 14
-	VlnPlot(merged, features = "CD4", group.by = "seurat_clusters", pt.size = 0) # CD4: 4, 6, 11, 14
-	VlnPlot(merged, features = "CD8A", group.by = "seurat_clusters", pt.size = 0) # CD8: 7, 8
-	VlnPlot(merged, features = "CD8B", group.by = "seurat_clusters", pt.size = 0) # CD8: 7, 8
-	VlnPlot(merged, features = "CD14", group.by = "seurat_clusters", pt.size = 0) # Monocytes: 0, 1, 2
-	VlnPlot(merged, features = "NCAM1", group.by = "seurat_clusters", pt.size = 0) # NK
+	VlnPlot(merged, features = "CD19", group.by = "seurat_clusters", pt.size = 0) # B cells: 4, 25, 27
+	VlnPlot(merged, features = "CD3D", group.by = "seurat_clusters", pt.size = 0) # T cells: 0, 1, 2, 6, 7, 8, 9, 10, 15, 17, 19, 20, 21, 24, 27
+	VlnPlot(merged, features = "CD3E", group.by = "seurat_clusters", pt.size = 0) # T cells: 0, 1, 2, 6, 7, 8, 9, 10, 15, 17, 19, 20, 21, 24, 27
+	VlnPlot(merged, features = "CD3G", group.by = "seurat_clusters", pt.size = 0) # T cells: 
+	VlnPlot(merged, features = "CD4", group.by = "seurat_clusters", pt.size = 0) # CD4: 0, 1, 8, 10, 11, 15, 16, 19, 20, 22, 26, 28
+	VlnPlot(merged, features = "CD8A", group.by = "seurat_clusters", pt.size = 0) # CD8: 2, 6, 7, 10, 17, 19, 27
+	VlnPlot(merged, features = "CD8B", group.by = "seurat_clusters", pt.size = 0) # CD8: 2, 6, 7, 10, 17, 19, 27
+	VlnPlot(merged, features = "CD14", group.by = "seurat_clusters", pt.size = 0) # Monocytes: 3, 5, 11, 13, 16, 21, 23, 28
+	VlnPlot(merged, features = "NCAM1", group.by = "seurat_clusters", pt.size = 0) # NK: 9
 	VlnPlot(merged, features = "NCAM2", group.by = "seurat_clusters", pt.size = 0) # NK
 	DimPlot(merged, group.by = "celltype", label = TRUE)
 dev.off()
 
-# library(SeuratWrappers)
+# In the other paper, MDSCs had ITGAM (CD11b) and CD33
 
-# obj_list <- PrepSCTIntegration(obj_list)
-# features <- SelectIntegrationFeatures(obj_list, nfeatures = 3000)
-# obj_list <- SCTNormalize(obj_list)
-# obj_list <- RunPCA(obj_list)
 
-# anchors <- FindIntegrationAnchors(obj_list, dims = 1:30, features = features)
-# merged <- IntegrateData(anchorset = anchors, dims = 1:30)
 
-# merged <- RunPCA(merged)
-# merged <- RunUMAP(merged, dims = 1:30)
-# merged <- FindClusters(merged, resolution = 0.5)
+intersect(
+c(0, 1, 2, 6, 7, 8, 9, 10, 15, 17, 19, 20, 21, 24, 27), 
+c(0, 1, 8, 10, 11, 15, 16, 19, 20, 22, 26, 28)
+) %>% dput()
+
+
+
+
+
