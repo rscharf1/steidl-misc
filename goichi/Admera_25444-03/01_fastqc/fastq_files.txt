@@ -1,0 +1,6 @@
+../fastqs/25444R-03-01_S121_L008_R1_001.fastq.gz
+../fastqs/25444R-03-01_S121_L008_R2_001.fastq.gz
+../fastqs/25444R-03-02_S99_L008_R1_001.fastq.gz
+../fastqs/25444R-03-02_S99_L008_R2_001.fastq.gz
+../fastqs/25444R-03-03_S100_L008_R1_001.fastq.gz
+../fastqs/25444R-03-03_S100_L008_R2_001.fastq.gz

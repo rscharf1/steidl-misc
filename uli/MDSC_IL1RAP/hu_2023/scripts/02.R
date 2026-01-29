@@ -75,13 +75,48 @@ dev.off()
 
 # In the other paper, MDSCs had ITGAM (CD11b) and CD33
 
+rownames(merged[["RNA"]])[
+  grep("IL1R", rownames(merged[["RNA"]]), ignore.case=TRUE)
+]
 
+pdf("out3.pdf")
 
-intersect(
-c(0, 1, 2, 6, 7, 8, 9, 10, 15, 17, 19, 20, 21, 24, 27), 
-c(0, 1, 8, 10, 11, 15, 16, 19, 20, 22, 26, 28)
-) %>% dput()
+  FeaturePlot(
+    merged,
+    features = "ITGAM"
+  ) + ggtitle("ITGAM (CD11b)")
 
+  FeaturePlot(
+    merged,
+    features = "CD33"
+  ) + ggtitle("CD33")
+
+  FeaturePlot(
+    merged,
+    features = "HLA-DRA"
+  ) + ggtitle("HLA-DRA")
+
+  FeaturePlot(
+    merged,
+    features = "HLA-DRB1"
+  ) + ggtitle("HLA-DRB1")
+
+  FeaturePlot(
+    merged,
+    features = "CD14"
+  ) + ggtitle("CD14")
+
+  FeaturePlot(
+    merged,
+    features = "FUT4"
+  ) + ggtitle("CD15")
+
+  FeaturePlot(
+    merged,
+    features = "IL1RAP"
+  ) + ggtitle("IL1RAP")
+
+dev.off()
 
 
 

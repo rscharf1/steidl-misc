@@ -1,0 +1,7 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	25444R-03-02_S99_L008_R1_001	/gs/gsfs0/home/rscharf/steidl_lab/misc/goichi/Admera_25444-03/01_fastqc/fastqc_out/25444R-03-02_S99_L008_R1_001_fastqc.zip
+FastQC	all_sections	25444R-03-02_S99_L008_R2_001	/gs/gsfs0/home/rscharf/steidl_lab/misc/goichi/Admera_25444-03/01_fastqc/fastqc_out/25444R-03-02_S99_L008_R2_001_fastqc.zip
+FastQC	all_sections	25444R-03-01_S121_L008_R2_001	/gs/gsfs0/home/rscharf/steidl_lab/misc/goichi/Admera_25444-03/01_fastqc/fastqc_out/25444R-03-01_S121_L008_R2_001_fastqc.zip
+FastQC	all_sections	25444R-03-01_S121_L008_R1_001	/gs/gsfs0/home/rscharf/steidl_lab/misc/goichi/Admera_25444-03/01_fastqc/fastqc_out/25444R-03-01_S121_L008_R1_001_fastqc.zip
+FastQC	all_sections	25444R-03-03_S100_L008_R2_001	/gs/gsfs0/home/rscharf/steidl_lab/misc/goichi/Admera_25444-03/01_fastqc/fastqc_out/25444R-03-03_S100_L008_R2_001_fastqc.zip
+FastQC	all_sections	25444R-03-03_S100_L008_R1_001	/gs/gsfs0/home/rscharf/steidl_lab/misc/goichi/Admera_25444-03/01_fastqc/fastqc_out/25444R-03-03_S100_L008_R1_001_fastqc.zip

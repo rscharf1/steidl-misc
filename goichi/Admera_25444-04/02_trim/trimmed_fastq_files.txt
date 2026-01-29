@@ -1,0 +1,4 @@
+trimmed/25444R-04-01_S53_L002_R1.trimmed.fastq.gz
+trimmed/25444R-04-01_S53_L002_R2.trimmed.fastq.gz
+trimmed/25444R-04-02_S54_L002_R1.trimmed.fastq.gz
+trimmed/25444R-04-02_S54_L002_R2.trimmed.fastq.gz
