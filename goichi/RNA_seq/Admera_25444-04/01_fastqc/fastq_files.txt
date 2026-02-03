@@ -1,0 +1,4 @@
+../fastqs/25444R-04-01_S53_L002_R1_001.fastq.gz
+../fastqs/25444R-04-01_S53_L002_R2_001.fastq.gz
+../fastqs/25444R-04-02_S54_L002_R1_001.fastq.gz
+../fastqs/25444R-04-02_S54_L002_R2_001.fastq.gz
