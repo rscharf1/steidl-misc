@@ -1,0 +1,128 @@
+GraphBuildTime	0.1085h wall, 0.0901h user + 0.0046h system = 0.0947h CPU (87.33%)
+GraphMergeTime	0.0001h wall, 0.0000h user + 0.0000h system = 0.0000h CPU (35.26%)
+disjointSubgraphs	10720
+nodes	16662
+directedEdges	17079
+selfEdges	5187
+totalGraphEvidence	197611
+totalCleaned	1071592
+highestSearchCount	85
+isMaxSearchCount	0
+highestSearchDensity	0.225
+isMaxSearchDensity	0
+
+[Sample0]
+Source	/gs/gsfs0/home/rscharf/steidl_lab/misc/goichi/WES/08_SV/bams/HL60_ctrl.fixedRG.dedup.bam
+MinMapqFiltered	372617	0.0420
+NotFiltered	8495396	0.9580
+NotFilteredAndIgnored	8346899	0.9412
+NotFilteredAndAnomalousPair	116426	0.0131
+NotFilteredAndAnomalousPairRemotes	88221	0.0099
+NotFilteredAndSplitRead	15514	0.0017
+NotFilteredAndSplitReadInAnomalousPair	4676	0.0005
+NotFilteredAndSplitReadSupplementarySegments	13910	N/A
+NotFilteredAndLargeIndel	15540	0.0018
+NotFilteredAndSemiAligned	9371	0.0011
+EvidenceType_pair	0	0.0000
+EvidenceType_local_pair	102845	0.6775
+EvidenceType_cigar	15743	0.1037
+EvidenceType_softclip	0	0.0000
+EvidenceType_semialign	9530	0.0628
+EvidenceType_shadow	0	0.0000
+EvidenceType_split_align	23680	0.1560
+EvidenceType_unknown	0	0.0000
+ClosePairs	13988
+
+[Sample1]
+Source	/gs/gsfs0/home/rscharf/steidl_lab/misc/goichi/WES/08_SV/bams/PY_low_1_CKDN260000486-1A_23KL3LLT4_L4.dedup.bam
+MinMapqFiltered	465680	0.0495
+NotFiltered	8938986	0.9505
+NotFilteredAndIgnored	8807514	0.9365
+NotFilteredAndAnomalousPair	103314	0.0110
+NotFilteredAndAnomalousPairRemotes	65528	0.0070
+NotFilteredAndSplitRead	9272	0.0010
+NotFilteredAndSplitReadInAnomalousPair	2889	0.0003
+NotFilteredAndSplitReadSupplementarySegments	7951	N/A
+NotFilteredAndLargeIndel	17511	0.0019
+NotFilteredAndSemiAligned	6569	0.0007
+EvidenceType_pair	0	0.0000
+EvidenceType_local_pair	80783	0.6850
+EvidenceType_cigar	17743	0.1505
+EvidenceType_softclip	0	0.0000
+EvidenceType_semialign	6724	0.0570
+EvidenceType_shadow	0	0.0000
+EvidenceType_split_align	12673	0.1075
+EvidenceType_unknown	0	0.0000
+ClosePairs	14710
+
+[Sample2]
+Source	/gs/gsfs0/home/rscharf/steidl_lab/misc/goichi/WES/08_SV/bams/PY_high_1_CKDN260000485-1A_23KL3LLT4_L4.dedup.bam
+MinMapqFiltered	591286	0.0552
+NotFiltered	10117839	0.9448
+NotFilteredAndIgnored	9951055	0.9292
+NotFilteredAndAnomalousPair	127390	0.0119
+NotFilteredAndAnomalousPairRemotes	79831	0.0075
+NotFilteredAndSplitRead	26553	0.0025
+NotFilteredAndSplitReadInAnomalousPair	12174	0.0011
+NotFilteredAndSplitReadSupplementarySegments	36026	N/A
+NotFilteredAndLargeIndel	20111	0.0019
+NotFilteredAndSemiAligned	10094	0.0009
+EvidenceType_pair	0	0.0000
+EvidenceType_local_pair	98115	0.5341
+EvidenceType_cigar	20328	0.1106
+EvidenceType_softclip	0	0.0000
+EvidenceType_semialign	10360	0.0564
+EvidenceType_shadow	0	0.0000
+EvidenceType_split_align	54913	0.2989
+EvidenceType_unknown	0	0.0000
+ClosePairs	17240
+
+NodeRegionSizequantile:
+0.25	40
+0.5	68
+0.75	128
+0.9	157
+0.95	173
+0.99	215
+NodeEdgeCount:
+0	0
+1	16424
+2	214
+3	15
+4	4
+5	1
+6	3
+7	0
+8	0
+9+	1
+NodeObservationCount:
+0	4915
+1	0
+2	0
+3	0
+4	0
+5	0
+6	0
+7	0
+8	0
+9	6238
+10	13
+11	6
+12	2614
+13	6
+14	2
+15	681
+16	0
+17	0
+18	555
+19	0
+20	2
+21	248
+22	2
+23	0
+24	202
+25	1
+26	0
+27	106
+28	0
+29+	1071
