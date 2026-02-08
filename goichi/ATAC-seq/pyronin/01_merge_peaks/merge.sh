@@ -1,0 +1,1 @@
+../../resistant/01_merge_peaks/merge.sh
