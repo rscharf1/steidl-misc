@@ -619,6 +619,94 @@ names(msig_tf) %>% head
 
 names(msig_tf)[grep("GATA", names(msig_tf))]
 
+# TF target genes 
+TF_sets <- msigdbr(
+  species = "Homo sapiens",
+  category = "C3"
+) %>%
+  filter(
+    grepl(
+      "PU1|GATA1|CEBPA|FOXO",
+      gs_name
+    )
+  ) %>%
+  split(x = .$ensembl_gene, f = .$gs_name)
+
+names(msig_go_bp)[grep("FOXO4", names(msig_go_bp))]
+
+sets <- c(
+  "PU1" = "PU1_Q6",
+  "GATA1" = "GATA1_01",
+  # "RUNX1",
+  "CEBPA" = "CEBPA_01",
+  "MYCv1" = "HALLMARK_MYC_TARGETS_V1",
+  "MYCv2" = "HALLMARK_MYC_TARGETS_V2",
+  "FOXO4" = "FOXO4_TARGET_GENES"
+)
+
+
+runx_targets <- fread("v2/RUNX1_targets_JASPAR.csv")
+
+symbol_df <- enframe(symbol_map, name = "ENSG", value = "Symbol") %>%
+  filter(!is.na(Symbol))
+
+# Join to your target list
+runx_targets_ensg <- runx_targets %>%
+  left_join(symbol_df, by = "Symbol")
+
+runx_targets_ensg
+
+as.vector(na.omit(runx_targets_ensg$ENSG))
+
+pdf("v2/goichi_TFs.pdf")
+
+  plotEnrichment(
+    TF_sets[[sets[1]]],
+    ranked_genes
+  ) +
+    labs(title = "GSEA: PU1 Targets")
+
+  plotEnrichment(
+    TF_sets[[sets[2]]],
+    ranked_genes
+  ) +
+    labs(title = "GSEA: GATA1 Targets")
+
+  plotEnrichment(
+    TF_sets[[sets[3]]],
+    ranked_genes
+  ) +
+    labs(title = "GSEA: CEBPA Targets")
+
+  plotEnrichment(
+    TF_sets[[sets[6]]],
+    ranked_genes
+  ) +
+    labs(title = "GSEA: FOXO4 Targets")
+
+  plotEnrichment(
+    hallmark_sets[["HALLMARK_MYC_TARGETS_V1"]],
+    ranked_genes
+  ) +
+    labs(title = "GSEA: MYC V1 Targets")
+
+  plotEnrichment(
+    hallmark_sets[["HALLMARK_MYC_TARGETS_V2"]],
+    ranked_genes
+  ) +
+    labs(title = "GSEA: MYC V2 Targets")
+
+  plotEnrichment(
+    as.vector(na.omit(runx_targets_ensg$ENSG)),
+    ranked_genes
+  ) +
+    labs(title = "JASPAR: RUNX1 Targets")
+
+dev.off()
+
+
+
+
 
 
 
