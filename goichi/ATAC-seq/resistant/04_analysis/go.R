@@ -411,7 +411,7 @@ df_plot <- as.data.frame(res)
 df_plot <- df_plot %>%
   mutate(sig = padj < 0.05)
 
-pdf(paste0("v2/volcano_", file_names, ".pdf"))
+pdf(paste0("v3/volcano_", file_names, ".pdf"))
 
 	label_candidates <- df_plot %>%
 	filter(
@@ -573,7 +573,7 @@ fgsea_res[order(fgsea_res$padj), ][, c("pathway", "NES", "padj")][1:10, ]
 top_fgsea <- fgsea_res %>%
   filter(padj < 0.1)
 
-pdf(paste0("v2/GSEA_", file_names, ".pdf"))
+pdf(paste0("v3/GSEA_", file_names, ".pdf"))
 
   ggplot(top_fgsea,
          aes(x = reorder(pathway, NES), y = NES, fill = NES > 0)) +
@@ -651,7 +651,7 @@ gata1_symbols <- symbol_map[TF_sets[["GATA1_01"]]] %>%
 
 df_plot %>% filter(!is.na(SYMBOL)) %>% head()
 
-pdf(paste0("v2/volcano_TF_", file_names, ".pdf"))
+pdf(paste0("v3/volcano_TF_", file_names, ".pdf"))
 
 	label_df <- df_plot %>% 
 		filter(SYMBOL %in% pu1_symbols) %>%
@@ -664,7 +664,7 @@ pdf(paste0("v2/volcano_TF_", file_names, ".pdf"))
 	    data = label_df,
 	    size = 0.8,
 	    alpha = 0.9,
-	    color = "dodgerblue3"
+	    color = "firebrick"
 	  ) +
 	  geom_vline(xintercept = 0, linetype = "dashed") +
 	  geom_hline(yintercept = -log10(0.05), linetype = "dashed") +
@@ -686,7 +686,7 @@ pdf(paste0("v2/volcano_TF_", file_names, ".pdf"))
 	    data = label_df,
 	    size = 0.8,
 	    alpha = 0.9,
-	    color = "dodgerblue3"
+	    color = "firebrick"
 	  ) +
 	  geom_vline(xintercept = 0, linetype = "dashed") +
 	  geom_hline(yintercept = -log10(0.05), linetype = "dashed") +
