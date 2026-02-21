@@ -1,0 +1,7 @@
+sample_id,condition
+C1T,1_day_treated
+C1U,1_day_control
+C2T,2_day_treated
+C2U,2_day_control
+C3T,3_day_treated
+C3U,3_day_control

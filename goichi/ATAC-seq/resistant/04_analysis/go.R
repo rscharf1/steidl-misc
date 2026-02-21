@@ -332,9 +332,9 @@ res_day1_vs_ctrl
 res_day14_vs_ctrl
 res_day14_vs_day1
 
-dt <- res_day14_vs_day1
-comparison <- "Day 14 v. Day 1"
-file_names <- "14_1"
+dt <- res_day1_vs_ctrl
+comparison <- "Day 1 v. Ctrl"
+file_names <- "1_ctrl"
 
 link_peaks_to_genes <- function(dt) {
 	res_dt <- as.data.table(as.data.frame(dt), keep.rownames = "peak_id")
@@ -411,7 +411,7 @@ df_plot <- as.data.frame(res)
 df_plot <- df_plot %>%
   mutate(sig = padj < 0.05)
 
-pdf(paste0("v3/volcano_", file_names, ".pdf"))
+pdf(paste0("v4/volcano_", file_names, ".pdf"))
 
 	label_candidates <- df_plot %>%
 	filter(
@@ -573,7 +573,7 @@ fgsea_res[order(fgsea_res$padj), ][, c("pathway", "NES", "padj")][1:10, ]
 top_fgsea <- fgsea_res %>%
   filter(padj < 0.1)
 
-pdf(paste0("v3/GSEA_", file_names, ".pdf"))
+pdf(paste0("v4/GSEA_", file_names, ".pdf"))
 
   ggplot(top_fgsea,
          aes(x = reorder(pathway, NES), y = NES, fill = NES > 0)) +
@@ -651,7 +651,7 @@ gata1_symbols <- symbol_map[TF_sets[["GATA1_01"]]] %>%
 
 df_plot %>% filter(!is.na(SYMBOL)) %>% head()
 
-pdf(paste0("v3/volcano_TF_", file_names, ".pdf"))
+pdf(paste0("v4/volcano_TF_", file_names, ".pdf"))
 
 	label_df <- df_plot %>% 
 		filter(SYMBOL %in% pu1_symbols) %>%
@@ -699,6 +699,55 @@ pdf(paste0("v3/volcano_TF_", file_names, ".pdf"))
 
 dev.off()
 
+pdf(paste0("v4/heat_TF_", file_names, ".pdf"))
+
+	label_df <- df_plot %>% 
+		filter(SYMBOL %in% pu1_symbols) %>%
+	  arrange(desc(log2FoldChange)) %>%
+	  distinct(SYMBOL, .keep_all = TRUE)
+
+	label_df %>%
+	  arrange(desc(log2FoldChange)) %>%
+	  mutate(SYMBOL = factor(SYMBOL, levels = SYMBOL)) %>%
+	  ggplot(aes(x = "log2FC", y = SYMBOL, fill = log2FoldChange)) +
+	  geom_tile(color = "white") +
+	  scale_fill_gradient2(
+	    low = "blue",
+	    mid = "white",
+	    high = "red",
+	    midpoint = 0
+	  ) +
+	  theme_minimal() +
+	  labs(
+	    x = "",
+	    y = "Gene",
+	    fill = "log2FC"
+	  ) +
+	  theme(
+	    axis.text.x = element_blank(),
+	    axis.ticks.x = element_blank()
+	  )
+
+	# ggplot(df_plot, aes(x = log2FoldChange, y = -log10(padj))) +
+	#   geom_point(size = 0.4, alpha = 0.4, color = "grey50") +
+	#   geom_point(
+	#     data = label_df,
+	#     size = 0.8,
+	#     alpha = 0.9,
+	#     color = "firebrick"
+	#   ) +
+	#   geom_vline(xintercept = 0, linetype = "dashed") +
+	#   geom_hline(yintercept = -log10(0.05), linetype = "dashed") +
+	#   labs(
+	#     x = paste0("log2 fold-change ", comparison),
+	#     y = "-log10(FDR)",
+	#     title = paste0("PU1 Targets: ", comparison)
+	#   ) +
+	#   theme_classic()
+
+dev.off()
+
+# Heatmap of TF Targets 
 
 
 

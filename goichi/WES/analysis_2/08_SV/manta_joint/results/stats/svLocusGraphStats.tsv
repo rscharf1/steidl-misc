@@ -1,0 +1,106 @@
+GraphBuildTime	0.1034h wall, 0.0829h user + 0.0035h system = 0.0864h CPU (83.60%)
+GraphMergeTime	0.0001h wall, 0.0000h user + 0.0000h system = 0.0000h CPU (22.23%)
+disjointSubgraphs	9756
+nodes	15353
+directedEdges	15560
+selfEdges	4366
+totalGraphEvidence	156572
+totalCleaned	1575960
+highestSearchCount	73
+isMaxSearchCount	0
+highestSearchDensity	0.225
+isMaxSearchDensity	0
+
+[Sample0]
+Source	/gs/gsfs0/home/rscharf/steidl_lab/misc/goichi/WES/analysis_2/08_SV/bams/HL_Ctrl_CKDN240010648-1A_227JFTLT4_L6.dedup.bam
+MinMapqFiltered	506703	0.0433
+NotFiltered	11208876	0.9567
+NotFilteredAndIgnored	10920581	0.9321
+NotFilteredAndAnomalousPair	250567	0.0214
+NotFilteredAndAnomalousPairRemotes	201495	0.0172
+NotFilteredAndSplitRead	23633	0.0020
+NotFilteredAndSplitReadInAnomalousPair	12241	0.0010
+NotFilteredAndSplitReadSupplementarySegments	24650	N/A
+NotFilteredAndLargeIndel	21958	0.0019
+NotFilteredAndSemiAligned	16705	0.0014
+EvidenceType_pair	0	0.0000
+EvidenceType_local_pair	204612	0.7208
+EvidenceType_cigar	22211	0.0782
+EvidenceType_softclip	0	0.0000
+EvidenceType_semialign	16955	0.0597
+EvidenceType_shadow	0	0.0000
+EvidenceType_split_align	40072	0.1412
+EvidenceType_unknown	0	0.0000
+ClosePairs	2498
+
+[Sample1]
+Source	/gs/gsfs0/home/rscharf/steidl_lab/misc/goichi/WES/analysis_2/08_SV/bams/HL_AraC_CKDN240010649-1A_227JFTLT4_L6.dedup.bam
+MinMapqFiltered	644677	0.0477
+NotFiltered	12872569	0.9523
+NotFilteredAndIgnored	12562732	0.9294
+NotFilteredAndAnomalousPair	263954	0.0195
+NotFilteredAndAnomalousPairRemotes	189650	0.0140
+NotFilteredAndSplitRead	31625	0.0023
+NotFilteredAndSplitReadInAnomalousPair	15526	0.0011
+NotFilteredAndSplitReadSupplementarySegments	38586	N/A
+NotFilteredAndLargeIndel	25685	0.0019
+NotFilteredAndSemiAligned	17862	0.0013
+EvidenceType_pair	0	0.0000
+EvidenceType_local_pair	193016	0.6503
+EvidenceType_cigar	25993	0.0876
+EvidenceType_softclip	0	0.0000
+EvidenceType_semialign	18146	0.0611
+EvidenceType_shadow	0	0.0000
+EvidenceType_split_align	59677	0.2010
+EvidenceType_unknown	0	0.0000
+ClosePairs	2535
+
+NodeRegionSizequantile:
+0.25	40
+0.5	60
+0.75	81
+0.9	106
+0.95	118
+0.99	145
+NodeEdgeCount:
+0	0
+1	15212
+2	126
+3	12
+4	2
+5	0
+6	0
+7	0
+8	0
+9+	1
+NodeObservationCount:
+0	4973
+1	0
+2	0
+3	0
+4	0
+5	0
+6	0
+7	0
+8	0
+9	5848
+10	21
+11	4
+12	2136
+13	20
+14	5
+15	639
+16	7
+17	3
+18	375
+19	2
+20	1
+21	205
+22	3
+23	1
+24	162
+25	1
+26	0
+27	133
+28	3
+29+	811
