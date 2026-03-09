@@ -261,7 +261,6 @@ pdf("Pyronin_comparison.pdf")
 	    alpha = 0.3,
 	    color = "black"
 	  ) +
-	  # scale_y_log10() +
 	  theme_classic() +
 	  labs(
 	    x = NULL,
@@ -272,14 +271,4 @@ pdf("Pyronin_comparison.pdf")
 	  )
 
 dev.off()
-
-
-
-
-
-
-
-
-
-
 

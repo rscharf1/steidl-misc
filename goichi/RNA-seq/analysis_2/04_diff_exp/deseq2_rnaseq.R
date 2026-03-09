@@ -8,6 +8,7 @@ suppressPackageStartupMessages({
   library(ggrepel)
   library(matrixStats)
   library(pheatmap)
+  library(dplyr)
 })
 
 counts_file <- "../03_align/counts/counts.txt"
@@ -22,7 +23,7 @@ counts <- read.delim(
 # featureCounts columns:
 # Geneid Chr Start End Strand Length sample1 sample2 ...
 count_matrix <- counts %>%
-  select(-Chr, -Start, -End, -Strand, -Length) %>%
+  dplyr::select(-Chr, -Start, -End, -Strand, -Length) %>%
   column_to_rownames("Geneid")
 
 colnames(count_matrix) <- colnames(count_matrix) %>% 
@@ -41,6 +42,10 @@ coldata$day <- factor(c(1,1,2,2,3,3))
 coldata$treatment <- factor(c("control","treated",
                               "control","treated",
                               "control","treated"))
+
+coldata$treatment <- factor(c("treated","control",
+                              "treated","control",
+                              "treated","control"))
 
 count_matrix <- count_matrix[, rownames(coldata)]
 
@@ -184,11 +189,66 @@ pdf("Heat.pdf")
 
 dev.off()
 
+############
+# Heatmap
 
+TFs <- c("SPI1", "GATA1", "RUNX1", "CEBPA")
 
+log_mat <- log2(norm_counts + 1)
+rownames(log_mat) <- sub("\\..*$", "", rownames(log_mat))
 
+TF_ens <- names(symbol_map)[symbol_map %in% TFs]
+log_mat_TF <- log_mat[rownames(log_mat) %in% TF_ens, ]
+rownames(log_mat_TF) <- symbol_map[TF_ens]
 
+annotation_col <- data.frame(
+  Day = factor(c("1","1","2","2","3","3")),
+  Treatment = factor(c("Treated","Control",
+                       "Treated","Control",
+                       "Treated","Control"))
+)
 
+rownames(annotation_col) <- colnames(log_mat_TF)
+
+pdf("Heat2.pdf")
+
+  pheatmap(
+    log_mat_TF,
+    scale = "row",                 # Z-score per gene
+    clustering_distance_rows = "euclidean",
+    clustering_distance_cols = "euclidean",
+    clustering_method = "complete",
+    annotation_col = annotation_col,
+    show_rownames = TRUE,
+    fontsize_col = 12,
+    color = colorRampPalette(c("navy", "white", "firebrick3"))(100),
+    border_color = NA
+  )
+
+  pheatmap(
+    log_mat_TF,
+    annotation_col = annotation_col,
+    cluster_cols = FALSE,
+    show_colnames = TRUE,
+    show_rownames = TRUE,
+    fontsize_row = 7,
+    main = "Notable TFs"
+  )
+
+  pheatmap(
+    log_mat_TF,
+    scale = "row",                 # Z-score per gene
+    annotation_col = annotation_col,
+    cluster_cols = FALSE,
+    cluster_rows = FALSE,
+    show_rownames = TRUE,
+    show_colnames = TRUE,
+    fontsize_col = 12,
+    color = colorRampPalette(c("navy", "white", "firebrick3"))(100),
+    border_color = NA
+  )
+
+dev.off()
 
 
 
